@@ -1,13 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Creepster&family=Raleway:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --black: #1b1b1b;
+  --white: #f5f5f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: clamp(16px, 3vw, 20px);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 8px;
+  background-image: url(./assets/halloween-background-mobile.jpg);
+  background-size: cover;
+  z-index: 14;
+}
+
+section::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1b1b1bcb;
+  z-index: -12;
+}
+
+form {
+  min-width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Creepster", serif;
+  letter-spacing: 0.05em;
+}
+
+label {
+  font-size: 1rem;
+  line-height: 1.618em;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  width: 50%;
+}
+
+input,
+select {
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-top: 30px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  section {
+    background-image: url(./assets/halloween-background.jpg);
+    background-position: center;
+  }
 }

@@ -1,3 +1,10 @@
+import { QuestionsAndAnswers } from "./components/QuestionsAndAnswers/QuestionsAndAnswers";
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
+  return (
+    <main>
+      <section>
+        <QuestionsAndAnswers />
+      </section>
+    </main>
+  );
 };
