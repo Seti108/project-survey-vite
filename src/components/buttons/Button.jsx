@@ -1,9 +1,15 @@
 import "./Button.css";
+import { useState } from "react";
 
-export const Button = ({ currentStep, setCurrentStep, data }) => {
+export const Button = ({ currentStep, setCurrentStep, data, errorMessage }) => {
+  const [error, setError] = useState(false);
   const nextStep = (e) => {
     e.preventDefault();
-    setCurrentStep(currentStep + 1);
+    if (data === "") {
+      return setError(errorMessage);
+    } else {
+      setCurrentStep(currentStep + 1);
+    }
   };
 
   const prevStep = (e) => {
@@ -15,7 +21,7 @@ export const Button = ({ currentStep, setCurrentStep, data }) => {
     <>
       <div className="buttons-container">
         {currentStep > 1 && (
-          <button className="button-back" onClick={prevStep} type="submit">
+          <button className="button-back" onClick={prevStep}>
             Back
           </button>
         )}
@@ -30,6 +36,7 @@ export const Button = ({ currentStep, setCurrentStep, data }) => {
           </button>
         )}
       </div>
+      <div className="error-message">{error}</div>
     </>
   );
 };

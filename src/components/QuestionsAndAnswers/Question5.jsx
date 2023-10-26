@@ -1,6 +1,12 @@
-export const Question5 = ({ updateData, data }) => {
+import { Button } from "../buttons/Button";
+export const Question5 = ({
+  data,
+  updateData,
+  currentStep,
+  setCurrentStep,
+}) => {
   const q5Input = (e) => updateData("q5", e.target.value);
-
+  const errorMessage = "Let us know how exited you are about Halloween!";
   return (
     <>
       <h1>Question 5</h1>
@@ -16,6 +22,12 @@ export const Question5 = ({ updateData, data }) => {
       ></input>
       <span>5</span>
       <p></p>
+      <Button
+        data={data}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+        errorMessage={errorMessage}
+      />
     </>
   );
 };

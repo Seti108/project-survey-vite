@@ -1,15 +1,30 @@
-export const Question1 = ({ data, updateData }) => {
+import { Button } from "../buttons/Button";
+export const Question1 = ({
+  data,
+  updateData,
+  currentStep,
+  setCurrentStep,
+}) => {
   const q1Input = (e) => updateData("q1", e.target.value);
+  const errorMessage = "Please input a name before continuing";
   return (
     <>
       <h1>Question 1</h1>
       <label>What's your name?</label>
+      <br></br>
       <input
         type="text"
         title="Your name"
         placeholder="Your name"
         value={data}
         onChange={q1Input}
+        autoFocus
+      />
+      <Button
+        data={data}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+        errorMessage={errorMessage}
       />
     </>
   );

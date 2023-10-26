@@ -1,12 +1,13 @@
-/* QUESTION 5 */
-
 input[type="range"] {
-  /* -webkit-appearance: none;
-  appearance: none;*/
   padding: 0;
   border-radius: 20px;
 }
 
-option {
-  padding: 1rem;
+input[type="radio"] {
+  margin: 8px;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
 }

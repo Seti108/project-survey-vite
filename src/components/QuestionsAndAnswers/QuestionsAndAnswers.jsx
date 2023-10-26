@@ -30,7 +30,6 @@ export const QuestionsAndAnswers = () => {
     });
     setCurrentStep(1);
   };
-
   const updateData = (key, value) => {
     setData((answers) => ({ ...answers, [key]: value }));
   };
@@ -40,30 +39,48 @@ export const QuestionsAndAnswers = () => {
 
   return (
     <>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         {currentStep === 1 && (
-          <Question1 updateData={updateData} data={data.q1} />
+          <Question1
+            updateData={updateData}
+            data={data.q1}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
         )}
         {currentStep === 2 && (
-          <Question2 updateData={updateData} data={data.q2} />
+          <Question2
+            updateData={updateData}
+            data={data.q2}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
         )}
         {currentStep === 3 && (
-          <Question3 updateData={updateData} data={data.q3} />
-        )}
-        {currentStep === 4 && (
-          <Question4 updateData={updateData} data={data.q4} />
-        )}
-        {currentStep === 5 && (
-          <Question5 updateData={updateData} data={data.q5} />
-        )}
-        {currentStep === 6 && <Results data={data} resetApp={resetApp} />}
-        {currentStep < 6 && (
-          <Button
+          <Question3
+            updateData={updateData}
             data={data}
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
           />
         )}
+        {currentStep === 4 && (
+          <Question4
+            updateData={updateData}
+            data={data.q4}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+        )}
+        {currentStep === 5 && (
+          <Question5
+            updateData={updateData}
+            data={data.q5}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+        )}
+        {currentStep === 6 && <Results data={data} resetApp={resetApp} />}
       </form>
     </>
   );

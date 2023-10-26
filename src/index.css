@@ -14,7 +14,7 @@ body {
   border: 0;
   padding: 0;
   box-sizing: border-box;
-
+  line-height: 1.618em;
   background-color: var(--black);
   color: var(--white);
 }
@@ -67,7 +67,7 @@ select {
   font-size: 1rem;
   padding: 8px 16px;
   margin-top: 30px;
-  margin: 8px;
+  margin: 30px;
   border-radius: 30px;
 }
 

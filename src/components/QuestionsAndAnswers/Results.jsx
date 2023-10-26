@@ -3,7 +3,7 @@ export const Results = ({ data, resetApp }) => {
     <>
       <h1>Your results:</h1>
       <p>
-        Helloween is a great holiday for indulging in {data.q4}. Don't you think{" "}
+        Halloween is a great holiday for indulging in {data.q4}. Don't you think{" "}
         {data.q1}?
       </p>
       <p>
