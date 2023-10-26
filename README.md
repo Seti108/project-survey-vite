@@ -41,10 +41,12 @@ The 'resetApp()' function brings user back to question no.1 (setCurrentStep(1)).
 - Then, the rendering will go through <Question(1, 2,...5) /> components and pass the 'updateData' and the relevant data ('data.q1', 'data.q2',...'data.q5') as props.
 - When the 'currentStep' === 6, it will render <Results />
 
-
+Collaborators: Sebastian Tigerschiöld
+May Sunktong
+ 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://glittering-crisp-83ddf9.netlify.app/
 
 ## Instructions
 
