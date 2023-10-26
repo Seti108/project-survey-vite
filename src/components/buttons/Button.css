@@ -1,0 +1,22 @@
+.buttons-container {
+  margin-top: 30px;
+}
+
+button {
+  font-size: 1rem;
+  border: none;
+  background-color: #d8a860;
+  color: var(--black);
+  border-radius: 40px;
+  padding: 1rem 1.2rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.button-back {
+  background-color: transparent;
+  margin-right: 30px;
+  color: var(--white);
+}

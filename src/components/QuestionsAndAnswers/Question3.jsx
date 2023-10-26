@@ -7,7 +7,7 @@ export const Question3 = ({ updateData, value, data }) => {
         type="text"
         title="activity"
         placeholder="Your favorite activity"
-        value={data.q3}
+        value={data}
         onChange={q3Input}
       />
     </>

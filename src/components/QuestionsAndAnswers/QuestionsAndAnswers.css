@@ -1,9 +1,12 @@
 /* QUESTION 5 */
 
 input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 70%; /* Make sure the input spans the entire width */
+  /* -webkit-appearance: none;
+  appearance: none;*/
   padding: 0;
   border-radius: 20px;
+}
+
+option {
+  padding: 1rem;
 }

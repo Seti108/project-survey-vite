@@ -14,7 +14,6 @@ export const QuestionsAndAnswers = () => {
     q1: "",
     q2: "",
     q3: "",
-    q3: "",
     q4: "",
     q5: "",
   });
@@ -27,9 +26,9 @@ export const QuestionsAndAnswers = () => {
       q2: "",
       q3: "",
       q4: "",
-      q5: NaN,
+      q5: "",
     });
-    // setStep(1);
+    setCurrentStep(1);
   };
 
   const updateData = (key, value) => {
@@ -42,13 +41,29 @@ export const QuestionsAndAnswers = () => {
   return (
     <>
       <form>
-        {currentStep === 1 && <Question1 updateData={updateData} data={data} />}
-        {currentStep === 2 && <Question2 updateData={updateData} data={data} />}
-        {currentStep === 3 && <Question3 updateData={updateData} data={data} />}
-        {currentStep === 4 && <Question4 updateData={updateData} data={data} />}
-        {currentStep === 5 && <Question5 updateData={updateData} data={data} />}
+        {currentStep === 1 && (
+          <Question1 updateData={updateData} data={data.q1} />
+        )}
+        {currentStep === 2 && (
+          <Question2 updateData={updateData} data={data.q2} />
+        )}
+        {currentStep === 3 && (
+          <Question3 updateData={updateData} data={data.q3} />
+        )}
+        {currentStep === 4 && (
+          <Question4 updateData={updateData} data={data.q4} />
+        )}
+        {currentStep === 5 && (
+          <Question5 updateData={updateData} data={data.q5} />
+        )}
         {currentStep === 6 && <Results data={data} resetApp={resetApp} />}
-        <Button currentStep={currentStep} setCurrentStep={setCurrentStep} />
+        {currentStep < 6 && (
+          <Button
+            data={data}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+        )}
       </form>
     </>
   );

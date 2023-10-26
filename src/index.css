@@ -5,12 +5,16 @@
   --white: #f5f5f5;
 }
 
+html {
+  font-size: clamp(16px, 3vw, 24px);
+}
+
 body {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: clamp(16px, 3vw, 20px);
+
   background-color: var(--black);
   color: var(--white);
 }
@@ -21,6 +25,7 @@ section {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  justify-content: center;
   padding: 0 8px;
   background-image: url(./assets/halloween-background-mobile.jpg);
   background-size: cover;
@@ -39,7 +44,8 @@ section::after {
 }
 
 form {
-  min-width: 100%;
+  width: 90%;
+  max-width: 800px;
 }
 
 h1 {
@@ -58,9 +64,17 @@ label {
 
 input,
 select {
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 8px 16px;
   margin-top: 30px;
+  margin: 8px;
+  border-radius: 30px;
+}
+
+button {
+  font-family: "Creepster", serif;
+  letter-spacing: 0.05em;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */

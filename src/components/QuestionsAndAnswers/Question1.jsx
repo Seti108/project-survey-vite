@@ -1,4 +1,4 @@
-export const Question1 = ({ nextStep, data, updateData }) => {
+export const Question1 = ({ data, updateData }) => {
   const q1Input = (e) => updateData("q1", e.target.value);
   return (
     <>
@@ -8,7 +8,7 @@ export const Question1 = ({ nextStep, data, updateData }) => {
         type="text"
         title="Your name"
         placeholder="Your name"
-        value={data.q1}
+        value={data}
         onChange={q1Input}
       />
     </>

@@ -1,23 +1,27 @@
 export const Results = ({ data, resetApp }) => {
-  let q5Exitement;
-  if (data.q5 < 3) {
-    q5Exitement = `Even though you don't care much about Halloween, we hope you have a
-        good one!`;
-  } else {
-    q5Exitement = `We're happy to hear you're as exited about Halloween as we are. Have a great sppoky season!`;
-  }
-
   return (
     <>
       <h1>Your results:</h1>
       <p>
-        Helloween is a great holiday indulging in {data.q4}. Don't you think{" "}
+        Helloween is a great holiday for indulging in {data.q4}. Don't you think{" "}
         {data.q1}?
       </p>
       <p>
-        Your favourite season is {data.q2}, maybe because of {data.q3}?
+        Your favourite season is {data.q2}, maybe because of{" "}
+        {data.q3.toLowerCase()}?
       </p>
-      <p>{q5Exitement}</p>
+      {data.q5 > 3 && (
+        <p>
+          We're happy to hear you're as exited about Halloween as we are. Have a
+          great spooky season!
+        </p>
+      )}
+      {data.q5 < 3 && (
+        <p>
+          Even though you don't care much for Halloween, we hope you have a good
+          one!
+        </p>
+      )}
       <button onClick={resetApp}>Start again</button>
     </>
   );

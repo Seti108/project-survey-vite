@@ -1,4 +1,6 @@
-export const Button = ({ currentStep, setCurrentStep }) => {
+import "./Button.css";
+
+export const Button = ({ currentStep, setCurrentStep, data }) => {
   const nextStep = (e) => {
     e.preventDefault();
     setCurrentStep(currentStep + 1);
@@ -11,30 +13,23 @@ export const Button = ({ currentStep, setCurrentStep }) => {
 
   return (
     <>
-      {/* {currentStep > 1 && currentStep < 6 ? (
-        <button onClick={nextStep} type="submit">
-          Next question
-        </button>
-      ) : (
-        <button onClick={prevStep} type="submit">
-          Back
-        </button>
-      )} */}
-      {currentStep > 1 && (
-        <button onClick={prevStep} type="submit">
-          Back
-        </button>
-      )}
+      <div className="buttons-container">
+        {currentStep > 1 && (
+          <button className="button-back" onClick={prevStep} type="submit">
+            Back
+          </button>
+        )}
 
-      {currentStep < 5 ? (
-        <button onClick={nextStep} type="submit">
-          Next question
-        </button>
-      ) : (
-        <button onClick={nextStep} type="submit">
-          Submit
-        </button>
-      )}
+        {currentStep < 5 ? (
+          <button onClick={nextStep} type="submit">
+            Next question
+          </button>
+        ) : (
+          <button onClick={nextStep} type="submit">
+            Submit
+          </button>
+        )}
+      </div>
     </>
   );
 };

@@ -1,5 +1,5 @@
 export const Question5 = ({ updateData, data }) => {
-  const q5Input = (e) => e.target.value;
+  const q5Input = (e) => updateData("q5", e.target.value);
 
   return (
     <>
@@ -11,8 +11,8 @@ export const Question5 = ({ updateData, data }) => {
         type="range"
         min="1"
         max="5"
-        defaultValue="3"
         onChange={q5Input}
+        value={data}
       ></input>
       <span>5</span>
       <p></p>

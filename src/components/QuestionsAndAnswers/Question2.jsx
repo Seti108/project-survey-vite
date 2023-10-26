@@ -10,7 +10,7 @@ export const Question2 = ({ updateData, data, value, nextStep }) => {
           name="options"
           value="fall"
           onChange={q2Input}
-          checked={data.q2 === "fall"}
+          checked={data === "fall"}
         />
         Fall
       </label>
@@ -20,7 +20,7 @@ export const Question2 = ({ updateData, data, value, nextStep }) => {
           name="options"
           value="winter"
           onChange={q2Input}
-          checked={data.q2 === "winter"}
+          checked={data === "winter"}
         />
         Winter
       </label>
@@ -30,7 +30,7 @@ export const Question2 = ({ updateData, data, value, nextStep }) => {
           name="options"
           value="summer"
           onChange={q2Input}
-          checked={data.q2 === "summer"}
+          checked={data === "summer"}
         />
         Summer
       </label>
@@ -40,7 +40,7 @@ export const Question2 = ({ updateData, data, value, nextStep }) => {
           name="options"
           value="spring"
           onChange={q2Input}
-          checked={data.q2 === "spring"}
+          checked={data === "spring"}
         />
         Spring
       </label>
