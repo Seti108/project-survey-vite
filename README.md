@@ -6,9 +6,7 @@
 
 # Survey Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A survey web app built with React focusing on the useState() hook.
 
 ## Getting Started with the Project
 
@@ -37,12 +35,11 @@ The 'useState()' hook is used to create a state variable called 'data' and it re
 The 'resetApp()' function brings user back to question no.1 (setCurrentStep(1)). 'e.preventDefault()' is also used at the beginning to ensures that when the event associated with the "reset" action occurs, the default behavior of that event is suppressed. Usage: onClick={resetApp}.
 
 3. Form Rendering
-- In 'QuestionsAndAnswer.jsx', the 'return' blocks contains the form structure. The form renders each question based on the value of 'currentStep'. To be able to render in order, the currentStep must match number of each question (Ex. currentStep === 1).
+- In 'QuestionsAndAnswers.jsx', the 'return' blocks contains the form structure. The form renders each question based on the value of 'currentStep'. To be able to render in order, the currentStep must match number of each question (Ex. currentStep === 1).
 - Then, the rendering will go through <Question(1, 2,...5) /> components and pass the 'updateData' and the relevant data ('data.q1', 'data.q2',...'data.q5') as props.
 - When the 'currentStep' === 6, it will render <Results />
 
-Collaborators: Sebastian Tigerschiöld
-May Sunktong
+Collaborators: Sebastian Tigerschiöld, May Sunktong
  
 ### View it live
 
